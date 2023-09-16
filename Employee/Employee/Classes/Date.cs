@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Employee.Exceptions;
 
 namespace Employee.Classes
 {
-    internal class Date
+    public class Date
     {
         #region Fields
 

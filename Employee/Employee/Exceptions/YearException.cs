@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Employee.Classes
+namespace Employee.Exceptions
 {
     [Serializable]
     internal class YearException : Exception
