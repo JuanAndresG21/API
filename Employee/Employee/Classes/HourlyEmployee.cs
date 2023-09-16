@@ -1,6 +1,6 @@
 ﻿namespace EmployeeOOP.Classes
 {
-    internal class HourlyEmployee : Employee
+    public class HourlyEmployee : Employee
     {
         #region Properties
 

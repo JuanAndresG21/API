@@ -6,7 +6,7 @@ try
 {
     int day, month, year, hours;
     string firstName, lastName;
-    decimal salary, hourValue, comission, sales;
+    decimal salary, hourValue, comission, sales, baseValue;
 
     Console.WriteLine("OOP Application Juan Andres Gutierrez");
     Console.WriteLine("--------------------------\n");
@@ -98,6 +98,29 @@ try
 
     Console.WriteLine("\nComission Employee:\n");
     Console.WriteLine(comissionEmployee.ToString());
+
+    Console.WriteLine("\n");
+
+    //Base Comission Employee
+
+    Console.Write("Ingresar pago base: ");
+    baseValue = Decimal.Parse(Console.ReadLine());
+
+    BaseComissionEmployee baseComissionEmployee = new BaseComissionEmployee()
+    {
+        Id = 123456,
+        FirstName = firstName,
+        lastName = lastName,
+        BirthDate = dateObject,
+        HiringDate = dateObject,
+        IsActive = true,
+        Sales = sales,
+        ComissionPercentaje = comission,
+        Base = baseValue,
+    };
+
+    Console.WriteLine("\nBase Comission Employee:\n");
+    Console.WriteLine(baseComissionEmployee.ToString());
 
     Console.WriteLine("\n");
 }
