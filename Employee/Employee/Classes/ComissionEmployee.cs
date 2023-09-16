@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeOOP.Classes
+﻿namespace EmployeeOOP.Classes
 {
     internal class ComissionEmployee : Employee
     {
@@ -28,7 +22,7 @@ namespace EmployeeOOP.Classes
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"Valor a Pagar: {(ComissionPercentaje/100) * Sales:C2}\n\t";
+                $"Valor a Pagar: {(ComissionPercentaje / 100) * Sales:C2}\n\t";
         }
 
         #endregion
