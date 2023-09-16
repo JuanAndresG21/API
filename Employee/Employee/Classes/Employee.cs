@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Employee.Classes
+﻿namespace EmployeeOOP.Classes
 {
     public abstract class Employee
     {
@@ -20,12 +14,14 @@ namespace Employee.Classes
 
         #region Methods
 
+        public Employee() { }
+
         public abstract decimal GetValueToPay();
 
         public override string ToString()
         {
-            return $"INFORMACION EMPLEADO \n\t " +
-                $"ID: {Id} \n\t " +
+            return $"INFORMACION EMPLEADO\n\t" +
+                $"ID: {Id}\n\t" +
                 $"Nombres: {FirstName}\n\t" +
                 $"Apellidos: {lastName}\n\t" +
                 $"Fecha de Nacimiento: {BirthDate}\n\t" +
