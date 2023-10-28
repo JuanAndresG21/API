@@ -8,5 +8,10 @@ namespace API_APP.DAL.Entities
         [MaxLength(50, ErrorMessage = "El campo {0} debe tener maximo {1} caracteres")]
         [Display(Name = "Pais")] //Forma de mostrar el campo en el front end
         public string Name { get; set; }
+
+
+        [Display(Name = "Estados")]
+        //relación con State 
+        public ICollection<State>? States { get; set; }
     }
 }

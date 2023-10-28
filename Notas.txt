@@ -1,6 +1,0 @@
-add-migration Nombre
-update-database   (crea la db)
-
-Cuando se crea una interfaz, se debe poner en program con el builder
-
-La programacion asincronica lleva async al final de los nombres de los metodos

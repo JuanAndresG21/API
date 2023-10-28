@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API_APP.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace API_APP.DAL.Entities
+namespace API_APP.DAL
 {
     public class DatabaseContext : DbContext
     {
@@ -13,8 +14,11 @@ namespace API_APP.DAL.Entities
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique(); //indice para evitar duplicados
+            modelBuilder.Entity<State>().HasIndex("Name", "CountryId").IsUnique(); //Indices Compuestos
         }
 
         public DbSet<Country> Countries { get; set; } //mapea en SQL creando la tabla
+
+        public DbSet<State> States { get; set; }
     }
 }

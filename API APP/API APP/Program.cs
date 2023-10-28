@@ -1,4 +1,4 @@
-using API_APP.DAL.Entities;
+using API_APP.DAL;
 using API_APP.Domain.Interfaces;
 using API_APP.Domain.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +18,7 @@ builder.Services.AddDbContext<DatabaseContext>(o => o.UseSqlServer(builder.Confi
 //builder.Services.AddTransient;
 //builder.Services.AddSingleton;
 builder.Services.AddScoped<ICountryService, CountryService>();  //se crea en cada ejecucion
+builder.Services.AddScoped<IStateService, StateService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
