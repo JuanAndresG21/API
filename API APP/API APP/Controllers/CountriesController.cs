@@ -84,7 +84,7 @@ namespace API_APP.Controllers
 
         [HttpGet, ActionName("Get")]
         [Route("GetByName/{name}")]  //concatena la url inicial api/countries/get
-        public async Task<ActionResult<Country>> GetCountryByIdAsync(string name)
+        public async Task<ActionResult<Country>> GetCountryByNameAsync(string name)
         {
             if (name == null)
             {
